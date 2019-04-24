@@ -128,6 +128,70 @@
 
   // Stretch task: 
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
+  function Villain(villainArrs) {
+    Humanoid.call(this, villainArrs);
+    this.name = villainArrs.name;
+  };
+
+  function Hero(heroArrs) {
+    Humanoid.call(this, heroArrs);
+    this.name = heroArrs.name;
+  };
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result 
   // in destruction if health gets to 0 or drops below 0;
+Villain.prototype.healthPoints = function() {
+  if (this.healthPoints <= 0) {
+    console.log("destruction");
+  } else {
+    console.log("KEEP GOING!");
+  };
+};
+
+Hero.prototype.healthPoints = function() {
+  if (this.healthPoints <= 0) {
+    console.log("DESTRUCTION FOR ALL!!!!!")
+  } else {
+    console.log("GET YOU NEXT TIME!")
+  };
+};
+
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+  const KataBoom = new Villain ({
+    createdAt: new Date(),
+    dimensions: {
+      length: 5,
+      width: 3,
+      height: 4,
+    },
+    healthPoints: 0.005,
+    name: "KataFlick",
+    team: "House of BoomFlicks!",
+    weapons: [
+      "stick",
+      "sword"
+    ],
+    language: "Spadakian"
+  });
+
+  const HabaDash = new Hero ({
+    createdAt: new Date(),
+    dimensions: {
+      length: 8,
+      width: 6,
+      height: 2,
+    },
+    healthPoints: 0.00006,
+    name: "DashHabs",
+    team: "House of Dashingzz",
+    weapons: [
+      "firestick",
+      "book"
+    ],
+    language: "Thorntian"
+  });
+
+  console.log(KataBoom.healthPoints);
+  console.log(HabaDash.healthPoints);
+
+  
