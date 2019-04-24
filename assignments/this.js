@@ -66,8 +66,8 @@ function buyHome(house) {
       console.log(this);
     }
   };
-   const Taylor = new Employee('Taylor');
-   const Alexis = new Employee('Alexis');
+//    const Taylor = new Employee('Taylor');
+//    const Alexis = new Employee('Alexis');
   Taylor.position.call(Alexis);
   Alexis.position.call(Taylor);
   
