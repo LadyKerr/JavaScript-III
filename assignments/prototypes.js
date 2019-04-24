@@ -139,7 +139,7 @@
   };
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result 
   // in destruction if health gets to 0 or drops below 0;
-Villain.prototype.healthPoints = function() {
+Villain.prototype.health = function() {
   if (this.healthPoints <= 0) {
     console.log("destruction");
   } else {
@@ -147,7 +147,7 @@ Villain.prototype.healthPoints = function() {
   };
 };
 
-Hero.prototype.healthPoints = function() {
+Hero.prototype.health = function() {
   if (this.healthPoints <= 0) {
     console.log("DESTRUCTION FOR ALL!!!!!")
   } else {
@@ -181,7 +181,7 @@ Hero.prototype.healthPoints = function() {
       width: 6,
       height: 2,
     },
-    healthPoints: 0.00006,
+    healthPoints: 0,
     name: "DashHabs",
     team: "House of Dashingzz",
     weapons: [
@@ -191,7 +191,7 @@ Hero.prototype.healthPoints = function() {
     language: "Thorntian"
   });
 
-  console.log(KataBoom.healthPoints);
-  console.log(HabaDash.healthPoints);
+  console.log(KataBoom.health());
+  console.log(HabaDash.health());
 
   
